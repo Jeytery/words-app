@@ -1,0 +1,50 @@
+{
+  "pins" : [
+    {
+      "identity" : "alertkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sparrowcode/AlertKit",
+      "state" : {
+        "revision" : "3b73be8db5a7e7efaf474c6ed919f5a437d843c9",
+        "version" : "5.1.9"
+      }
+    },
+    {
+      "identity" : "floatinggesture",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Jeytery/FloatingGesture",
+      "state" : {
+        "branch" : "master",
+        "revision" : "6a59523d8fcc4c7de4cea0cc010abb16d3f284bf"
+      }
+    },
+    {
+      "identity" : "navigationbuttonable",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Jeytery/NavigationButtonable",
+      "state" : {
+        "branch" : "master",
+        "revision" : "eacd8bde17d1021f39adabbf4999bc6aaefbaaa8"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit",
+      "state" : {
+        "branch" : "develop",
+        "revision" : "07c5d1f6044701d97e94dc11157259e8811977be"
+      }
+    },
+    {
+      "identity" : "upiter",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Jeytery/Upiter",
+      "state" : {
+        "branch" : "master",
+        "revision" : "2293a4a171702008513498ce51eb4012fe5ff413"
+      }
+    }
+  ],
+  "version" : 2
+}
