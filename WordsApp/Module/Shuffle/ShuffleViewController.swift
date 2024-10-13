@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import FloatingGesture
 import SnapKit
 import NavigationButtonable
 

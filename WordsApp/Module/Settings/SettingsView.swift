@@ -58,21 +58,6 @@ struct SettingsView: View {
                         UIApplication.shared.open(url)
                     }
                 })
-                infoCell(title1: "Ask a question", title2: "Mail", disclosureIndicator: true, imageName: "bubble.left.fill", imageColor: .systemOrange, didTap: {
-                    if MFMailComposeViewController.canSendMail() {
-                        isShowingMailView = true
-                    }
-                    else {
-                        let email = "dimaostapchenko@gmail.com"
-                        if let url = URL(string: "mailto:\(email)") {
-                            if #available(iOS 10.0, *) {
-                                UIApplication.shared.open(url)
-                            } else {
-                                UIApplication.shared.openURL(url)
-                            }
-                        }
-                    }
-                })
             }
             Section {
                 infoCell(title1: "Privacy Policy", title2: "", disclosureIndicator: true, imageName: "doc.text.fill", imageColor: .systemPink, didTap: {
