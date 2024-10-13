@@ -30,6 +30,7 @@
 		3ECCAE5D2CBB0E3E007C1CF1 /* AnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECCAE5B2CBB0E3E007C1CF1 /* AnimatedView.swift */; };
 		3ECCAE5E2CBB0E3E007C1CF1 /* InsetGroupedSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECCAE5C2CBB0E3E007C1CF1 /* InsetGroupedSectionView.swift */; };
 		3ECCAE602CBB0F2A007C1CF1 /* HeaderChangePackageNameCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECCAE5F2CBB0F2A007C1CF1 /* HeaderChangePackageNameCellView.swift */; };
+		3ECCAE622CBBB39D007C1CF1 /* LightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECCAE612CBBB39D007C1CF1 /* LightButton.swift */; };
 		3EF8873C29091EE8007AB3B5 /* BackupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF8873B29091EE8007AB3B5 /* BackupService.swift */; };
 		3EF8873F29091F4B007AB3B5 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF8873E29091F4B007AB3B5 /* Typealiases.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		3ECCAE5B2CBB0E3E007C1CF1 /* AnimatedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedView.swift; sourceTree = "<group>"; };
 		3ECCAE5C2CBB0E3E007C1CF1 /* InsetGroupedSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsetGroupedSectionView.swift; sourceTree = "<group>"; };
 		3ECCAE5F2CBB0F2A007C1CF1 /* HeaderChangePackageNameCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderChangePackageNameCellView.swift; sourceTree = "<group>"; };
+		3ECCAE612CBBB39D007C1CF1 /* LightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightButton.swift; sourceTree = "<group>"; };
 		3EF8873B29091EE8007AB3B5 /* BackupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupService.swift; sourceTree = "<group>"; };
 		3EF8873E29091F4B007AB3B5 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +188,7 @@
 				3ECCAE5C2CBB0E3E007C1CF1 /* InsetGroupedSectionView.swift */,
 				3ECCAE562CBB0CD6007C1CF1 /* NativeHeader */,
 				3ECCAE5F2CBB0F2A007C1CF1 /* HeaderChangePackageNameCellView.swift */,
+				3ECCAE612CBBB39D007C1CF1 /* LightButton.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				3E4FA01329031F54007AA43D /* ShuffleViewController.swift in Sources */,
 				3ECCAE5E2CBB0E3E007C1CF1 /* InsetGroupedSectionView.swift in Sources */,
 				3E4FA0352903F784007AA43D /* PackageViewController.swift in Sources */,
+				3ECCAE622CBBB39D007C1CF1 /* LightButton.swift in Sources */,
 				3EF8873C29091EE8007AB3B5 /* BackupService.swift in Sources */,
 				3E2B01FD2908692F007B3B81 /* WordCardView.swift in Sources */,
 				3ECCAE5A2CBB0CD6007C1CF1 /* NativeHeaderCollectionView.swift in Sources */,

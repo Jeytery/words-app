@@ -57,13 +57,14 @@ class PackagesViewController: UIViewController {
     private let packageService: PackageServiceTarget
     private let emptyLabel = UILabel()
     private let tableView = UITableView(frame: .zero, style: .insetGrouped)
-    private var packages = WordPackages()
+    private(set) var packages = WordPackages()
 }
 
-private extension PackagesViewController {
+// MARK: - public api
+extension PackagesViewController {
     func displayPackages(_ packages: WordPackages) {
         self.packages = packages
-        self.emptyLabel.alpha = packages.isEmpty ? 0 : 1
+        self.emptyLabel.alpha = packages.isEmpty ? 1 : 0
         tableView.reloadData()
     }
     
@@ -78,7 +79,9 @@ private extension PackagesViewController {
         packages.isEmpty ? setEmptyState() : popEmptyState()
         tableView.deleteRows(at: [indexPath], with: .fade)
     }
-    
+}
+
+private extension PackagesViewController {
     func setEmptyState() {
         UIView.animate(withDuration: 0.3, animations: {
             [weak self] in
@@ -188,7 +191,7 @@ private extension PackagesViewController {
         emptyLabel.text = "No packages..."
         emptyLabel.font = .systemFont(ofSize: 22, weight: .semibold)
         emptyLabel.tintColor = .secondaryLabel
-        
+        emptyLabel.alpha = 0 
         view.addSubview(emptyLabel)
         emptyLabel.snp.makeConstraints() {
             $0.center.equalToSuperview()
@@ -237,6 +240,7 @@ extension PackagesViewController: UITableViewDelegate, UITableViewDataSource {
             withIdentifier: "cell",
             for: indexPath)
         cell.textLabel?.text = packages[indexPath.row].name
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     
