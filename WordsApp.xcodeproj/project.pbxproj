@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E2B01FD2908692F007B3B81 /* WordCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2B01FC2908692F007B3B81 /* WordCardView.swift */; };
+		3E2F120E2CBBD72900AB060F /* FloatingGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2F120D2CBBD72900AB060F /* FloatingGesture.swift */; };
 		3E4F9FF729031D95007AA43D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4F9FF629031D95007AA43D /* AppDelegate.swift */; };
 		3E4FA00029031D97007AA43D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E4F9FFF29031D97007AA43D /* Assets.xcassets */; };
 		3E4FA00329031D97007AA43D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E4FA00129031D97007AA43D /* LaunchScreen.storyboard */; };
@@ -23,7 +24,6 @@
 		3E4FA0322903F5EB007AA43D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4FA0312903F5EB007AA43D /* MainCoordinator.swift */; };
 		3E4FA0352903F784007AA43D /* PackageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4FA0342903F784007AA43D /* PackageViewController.swift */; };
 		3E4FA0382903FA10007AA43D /* DoubleTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4FA0372903FA10007AA43D /* DoubleTitleTableViewCell.swift */; };
-		3E4FA03B29040B39007AA43D /* FloatingGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 3E4FA03A29040B39007AA43D /* FloatingGesture */; };
 		3ECCAE542CBB09BB007C1CF1 /* AlertKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3ECCAE532CBB09BB007C1CF1 /* AlertKit */; };
 		3ECCAE592CBB0CD6007C1CF1 /* NativeHeaderCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECCAE572CBB0CD6007C1CF1 /* NativeHeaderCellView.swift */; };
 		3ECCAE5A2CBB0CD6007C1CF1 /* NativeHeaderCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECCAE582CBB0CD6007C1CF1 /* NativeHeaderCollectionView.swift */; };
@@ -31,12 +31,16 @@
 		3ECCAE5E2CBB0E3E007C1CF1 /* InsetGroupedSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECCAE5C2CBB0E3E007C1CF1 /* InsetGroupedSectionView.swift */; };
 		3ECCAE602CBB0F2A007C1CF1 /* HeaderChangePackageNameCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECCAE5F2CBB0F2A007C1CF1 /* HeaderChangePackageNameCellView.swift */; };
 		3ECCAE622CBBB39D007C1CF1 /* LightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECCAE612CBBB39D007C1CF1 /* LightButton.swift */; };
+		3ECCAE652CBBD119007C1CF1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECCAE642CBBD119007C1CF1 /* SettingsView.swift */; };
+		3ECCAE682CBBD171007C1CF1 /* SettingsIconGenerator in Frameworks */ = {isa = PBXBuildFile; productRef = 3ECCAE672CBBD171007C1CF1 /* SettingsIconGenerator */; };
+		3ECCAE6A2CBBD287007C1CF1 /* ClosableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECCAE692CBBD287007C1CF1 /* ClosableNavigationController.swift */; };
 		3EF8873C29091EE8007AB3B5 /* BackupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF8873B29091EE8007AB3B5 /* BackupService.swift */; };
 		3EF8873F29091F4B007AB3B5 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF8873E29091F4B007AB3B5 /* Typealiases.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3E2B01FC2908692F007B3B81 /* WordCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCardView.swift; sourceTree = "<group>"; };
+		3E2F120D2CBBD72900AB060F /* FloatingGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingGesture.swift; sourceTree = "<group>"; };
 		3E4F9FF329031D95007AA43D /* WordsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E4F9FF629031D95007AA43D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E4F9FFF29031D97007AA43D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 		3ECCAE5C2CBB0E3E007C1CF1 /* InsetGroupedSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsetGroupedSectionView.swift; sourceTree = "<group>"; };
 		3ECCAE5F2CBB0F2A007C1CF1 /* HeaderChangePackageNameCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderChangePackageNameCellView.swift; sourceTree = "<group>"; };
 		3ECCAE612CBBB39D007C1CF1 /* LightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightButton.swift; sourceTree = "<group>"; };
+		3ECCAE642CBBD119007C1CF1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3ECCAE692CBBD287007C1CF1 /* ClosableNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosableNavigationController.swift; sourceTree = "<group>"; };
 		3EF8873B29091EE8007AB3B5 /* BackupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupService.swift; sourceTree = "<group>"; };
 		3EF8873E29091F4B007AB3B5 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,10 +72,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ECCAE682CBBD171007C1CF1 /* SettingsIconGenerator in Frameworks */,
 				3E4FA0292903DD0A007AA43D /* NavigationButtonable in Frameworks */,
 				3E4FA02029032E42007AA43D /* SnapKit in Frameworks */,
 				3ECCAE542CBB09BB007C1CF1 /* AlertKit in Frameworks */,
-				3E4FA03B29040B39007AA43D /* FloatingGesture in Frameworks */,
 				3E4FA02629033766007AA43D /* Upiter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +118,7 @@
 		3E4FA00E29031F02007AA43D /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				3ECCAE632CBBD10F007C1CF1 /* Settings */,
 				3E4FA0332903F76B007AA43D /* Package */,
 				3E4FA02C2903F452007AA43D /* Packages */,
 				3E4FA01029031F12007AA43D /* Shuffle */,
@@ -189,6 +196,8 @@
 				3ECCAE562CBB0CD6007C1CF1 /* NativeHeader */,
 				3ECCAE5F2CBB0F2A007C1CF1 /* HeaderChangePackageNameCellView.swift */,
 				3ECCAE612CBBB39D007C1CF1 /* LightButton.swift */,
+				3ECCAE692CBBD287007C1CF1 /* ClosableNavigationController.swift */,
+				3E2F120D2CBBD72900AB060F /* FloatingGesture.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -200,6 +209,14 @@
 				3ECCAE582CBB0CD6007C1CF1 /* NativeHeaderCollectionView.swift */,
 			);
 			path = NativeHeader;
+			sourceTree = "<group>";
+		};
+		3ECCAE632CBBD10F007C1CF1 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3ECCAE642CBBD119007C1CF1 /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		3EF8873D29091F3F007AB3B5 /* Root */ = {
@@ -230,8 +247,8 @@
 				3E4FA01F29032E42007AA43D /* SnapKit */,
 				3E4FA02529033766007AA43D /* Upiter */,
 				3E4FA0282903DD0A007AA43D /* NavigationButtonable */,
-				3E4FA03A29040B39007AA43D /* FloatingGesture */,
 				3ECCAE532CBB09BB007C1CF1 /* AlertKit */,
+				3ECCAE672CBBD171007C1CF1 /* SettingsIconGenerator */,
 			);
 			productName = WordsApp;
 			productReference = 3E4F9FF329031D95007AA43D /* WordsApp.app */;
@@ -265,8 +282,8 @@
 				3E4FA01E29032E42007AA43D /* XCRemoteSwiftPackageReference "SnapKit" */,
 				3E4FA02429033766007AA43D /* XCRemoteSwiftPackageReference "Upiter" */,
 				3E4FA0272903DD09007AA43D /* XCRemoteSwiftPackageReference "NavigationButtonable" */,
-				3E4FA03929040B39007AA43D /* XCRemoteSwiftPackageReference "FloatingGesture" */,
 				3ECCAE522CBB09BB007C1CF1 /* XCRemoteSwiftPackageReference "AlertKit" */,
+				3ECCAE662CBBD171007C1CF1 /* XCRemoteSwiftPackageReference "SettingsIconGenerator" */,
 			);
 			productRefGroup = 3E4F9FF429031D95007AA43D /* Products */;
 			projectDirPath = "";
@@ -297,8 +314,10 @@
 				3E4FA0322903F5EB007AA43D /* MainCoordinator.swift in Sources */,
 				3E4FA0382903FA10007AA43D /* DoubleTitleTableViewCell.swift in Sources */,
 				3E4F9FF729031D95007AA43D /* AppDelegate.swift in Sources */,
+				3ECCAE6A2CBBD287007C1CF1 /* ClosableNavigationController.swift in Sources */,
 				3E4FA01329031F54007AA43D /* ShuffleViewController.swift in Sources */,
 				3ECCAE5E2CBB0E3E007C1CF1 /* InsetGroupedSectionView.swift in Sources */,
+				3ECCAE652CBBD119007C1CF1 /* SettingsView.swift in Sources */,
 				3E4FA0352903F784007AA43D /* PackageViewController.swift in Sources */,
 				3ECCAE622CBBB39D007C1CF1 /* LightButton.swift in Sources */,
 				3EF8873C29091EE8007AB3B5 /* BackupService.swift in Sources */,
@@ -307,6 +326,7 @@
 				3E4FA02E2903F474007AA43D /* PackagesViewController.swift in Sources */,
 				3ECCAE592CBB0CD6007C1CF1 /* NativeHeaderCellView.swift in Sources */,
 				3EF8873F29091F4B007AB3B5 /* Typealiases.swift in Sources */,
+				3E2F120E2CBBD72900AB060F /* FloatingGesture.swift in Sources */,
 				3ECCAE5D2CBB0E3E007C1CF1 /* AnimatedView.swift in Sources */,
 				3ECCAE602CBB0F2A007C1CF1 /* HeaderChangePackageNameCellView.swift in Sources */,
 				3E4FA023290332D7007AA43D /* PackageService.swift in Sources */,
@@ -554,20 +574,20 @@
 				kind = branch;
 			};
 		};
-		3E4FA03929040B39007AA43D /* XCRemoteSwiftPackageReference "FloatingGesture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Jeytery/FloatingGesture";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		3ECCAE522CBB09BB007C1CF1 /* XCRemoteSwiftPackageReference "AlertKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sparrowcode/AlertKit";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.1.9;
+			};
+		};
+		3ECCAE662CBBD171007C1CF1 /* XCRemoteSwiftPackageReference "SettingsIconGenerator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparrowcode/SettingsIconGenerator";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -588,15 +608,15 @@
 			package = 3E4FA0272903DD09007AA43D /* XCRemoteSwiftPackageReference "NavigationButtonable" */;
 			productName = NavigationButtonable;
 		};
-		3E4FA03A29040B39007AA43D /* FloatingGesture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3E4FA03929040B39007AA43D /* XCRemoteSwiftPackageReference "FloatingGesture" */;
-			productName = FloatingGesture;
-		};
 		3ECCAE532CBB09BB007C1CF1 /* AlertKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3ECCAE522CBB09BB007C1CF1 /* XCRemoteSwiftPackageReference "AlertKit" */;
 			productName = AlertKit;
+		};
+		3ECCAE672CBBD171007C1CF1 /* SettingsIconGenerator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3ECCAE662CBBD171007C1CF1 /* XCRemoteSwiftPackageReference "SettingsIconGenerator" */;
+			productName = SettingsIconGenerator;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

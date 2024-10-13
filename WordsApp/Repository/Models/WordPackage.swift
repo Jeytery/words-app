@@ -23,5 +23,9 @@ struct WordPackage: Codable, Jsonable, Archivable {
             return Array(_words[0...10])
         }
     }
+    
+    var cardContentShufled: [CardContent] {
+        return self.words.map({ return CardContent(firstTitle: $0.firstTitle, secondTitle: $0.secondTitle) }).shuffled()
+    }
 }
 typealias WordPackages = [WordPackage] 

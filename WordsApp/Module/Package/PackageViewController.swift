@@ -344,6 +344,54 @@ extension PackageViewController: UITableViewDelegate, UITableViewDataSource {
         return header.dynamicHeight
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let selectedWord = self.package.words[indexPath.row]
+        let alert = UIAlertController(
+            title: "Change the word",
+            message: "",
+            preferredStyle: .alert
+        )
+        alert.addTextField {
+            tf in
+            tf.placeholder = "Word"
+            tf.text = selectedWord.firstTitle
+        }
+        alert.addTextField {
+            tf in
+            tf.placeholder = "Translation"
+            tf.text = selectedWord.secondTitle
+        }
+        alert.addAction(
+            .init(title: "Cancel", style: .cancel) { _ in }
+        )
+        alert.addAction(
+            .init(title: "Change", style: .default) {
+                [unowned self] _ in
+                guard
+                    let firstTitle = alert.textFields![0].text,
+                    !firstTitle.isEmpty
+                else {
+                    AlertKitAPI.present(title: "Word is empty", subtitle: nil, icon: .error, style: .iOS16AppleMusic, haptic: .error)
+                    return
+                }
+                guard
+                    let secondTitle = alert.textFields![1].text,
+                    !secondTitle.isEmpty
+                else {
+                    AlertKitAPI.present(title: "Translation is empty", subtitle: nil, icon: .error, style: .iOS16AppleMusic, haptic: .error)
+                    return
+                }
+                let word = Word(firstTitle: firstTitle, secondTitle: secondTitle, rating: 0)
+                self.package.words.remove(at: indexPath.row)
+                self.package.words.insert(word, at: indexPath.row)
+                self.tableView.reloadRows(at: [indexPath], with: .fade)
+                self.delegate?.packageViewController(self, didAdd: word)
+            }
+        )
+        present(alert, animated: true, completion: nil)
+    }
+    
     func tableView(
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath

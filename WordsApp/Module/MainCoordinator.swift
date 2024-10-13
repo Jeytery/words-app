@@ -7,7 +7,7 @@
 
 import UIKit
 import AlertKit
-
+import SwiftUI
 class MainCoordinator {
     private(set) var navigationPresenter = UINavigationController()
     private var currentPackageIndex: Int = 0
@@ -22,6 +22,13 @@ class MainCoordinator {
 }
 
 extension MainCoordinator: PackagesViewControllerDelegate {
+    func packagesViewControllerDidTapSettings(_ viewController: PackagesViewController) {
+        let settingsViewController = UIHostingController(rootView: SettingsView())
+        let navigation = ClosableNavigationController(rootViewController: settingsViewController).onlyFirst()
+        navigation.modalPresentationStyle = .overFullScreen
+        navigationPresenter.present(navigation, animated: true)
+    }
+    
     func packagesViewController(
         _ viewController: PackagesViewController,
         didTapShuffle package: WordPackage,
@@ -33,8 +40,25 @@ extension MainCoordinator: PackagesViewControllerDelegate {
             navigationPresenter.present(alert, animated: true, completion: nil)
             return
         }
-        let vc = ShuffleViewController(
-            words: package.firstRandomTen
+        let vc = CardStackViewController(cardContents: package.cardContentShufled)
+        let nvc = UINavigationController(rootViewController: vc)
+        nvc.modalPresentationStyle = .overFullScreen
+        navigationPresenter.present(nvc, animated: true, completion: nil)
+    }
+    
+    func packagesViewController(_ viewController: PackagesViewController, didTapReverseShuffle package: WordPackage, at index: Int) {
+        if package.words.isEmpty {
+            let alert = UIAlertController(title: "No words in package", message: nil, preferredStyle: .alert)
+            alert.addAction(.init(title: "Okay", style: .default) { _ in })
+            navigationPresenter.present(alert, animated: true, completion: nil)
+            return
+        }
+        let vc = CardStackViewController(
+            cardContents: package.words
+                .map({
+                    return CardContent(firstTitle: $0.secondTitle, secondTitle: $0.firstTitle)
+                })
+                .shuffled()
         )
         let nvc = UINavigationController(rootViewController: vc)
         nvc.modalPresentationStyle = .overFullScreen
@@ -113,6 +137,10 @@ extension MainCoordinator: PackageViewControllerDelegate {
             activityType, completed, returnedItems, error in
             completion()
         }
+        if activityViewController.popoverPresentationController?.sourceView == nil {
+            activityViewController.popoverPresentationController?.sourceView = self.navigationPresenter.viewControllers.first?.view
+            activityViewController.popoverPresentationController?.sourceRect = self.navigationPresenter.viewControllers.first?.view?.frame ?? .zero
+        }
         navigationPresenter.present(activityViewController, animated: true)
     }
     
@@ -147,5 +175,37 @@ extension MainCoordinator: PackageViewControllerDelegate {
             error in
             AlertKitAPI.present(title: "\(error)", icon: .error, style: .iOS17AppleMusic, haptic: .error)
         })
+    }
+    
+    func packageViewController(_ viewController: PackageViewController, didTapShuffleWith package: WordPackage) {
+        if package.words.isEmpty {
+            let alert = UIAlertController(title: "No words in package", message: nil, preferredStyle: .alert)
+            alert.addAction(.init(title: "Okay", style: .default) { _ in })
+            navigationPresenter.present(alert, animated: true, completion: nil)
+            return
+        }
+        let vc = CardStackViewController(cardContents: package.cardContentShufled)
+        let nvc = UINavigationController(rootViewController: vc)
+        nvc.modalPresentationStyle = .overFullScreen
+        navigationPresenter.present(nvc, animated: true, completion: nil)
+    }
+    
+    func packageViewController(_ viewController: PackageViewController, didTapReverseShuffleWith package: WordPackage) {
+        if package.words.isEmpty {
+            let alert = UIAlertController(title: "No words in package", message: nil, preferredStyle: .alert)
+            alert.addAction(.init(title: "Okay", style: .default) { _ in })
+            navigationPresenter.present(alert, animated: true, completion: nil)
+            return
+        }
+        let vc = CardStackViewController(
+            cardContents: package.words
+                .map({
+                    return CardContent(firstTitle: $0.secondTitle, secondTitle: $0.firstTitle)
+                })
+                .shuffled()
+        )
+        let nvc = UINavigationController(rootViewController: vc)
+        nvc.modalPresentationStyle = .overFullScreen
+        navigationPresenter.present(nvc, animated: true, completion: nil)
     }
 }

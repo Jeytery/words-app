@@ -26,6 +26,16 @@ protocol PackagesViewControllerDelegate: AnyObject {
         didTapShuffle package: WordPackage,
         at index: Int
     )
+    
+    func packagesViewController(
+        _ viewController: PackagesViewController,
+        didTapReverseShuffle package: WordPackage,
+        at index: Int
+    )
+    
+    func packagesViewControllerDidTapSettings(
+        _ viewController: PackagesViewController
+    )
 }
 
 class PackagesViewController: UIViewController {
@@ -221,13 +231,22 @@ extension PackagesViewController {
             target: self,
             action: #selector(addDidTap)
         )
+        let settings = UIBarButtonItem(
+            image: UIImage(systemName: "gear"),
+            style: .plain,
+            target: self,
+            action: #selector(didTapSettings))
         let _import = UIBarButtonItem(
             image: UIImage(systemName: "square.and.arrow.down")!,
             style: .plain,
             target: self,
             action: #selector(importDidTap))
-
         navigationItem.rightBarButtonItems = [add, _import]
+        navigationItem.leftBarButtonItems = [settings]
+    }
+    
+    @objc private func didTapSettings() {
+        self.delegate?.packagesViewControllerDidTapSettings(self)
     }
 }
 
@@ -321,7 +340,20 @@ extension PackagesViewController: UITableViewDelegate, UITableViewDataSource {
         share.backgroundColor = .systemGreen
         shuffle.backgroundColor = .systemPurple
        
-        return UISwipeActionsConfiguration(actions: [shuffle, share, delete])
+        let reverseShuffle = UIContextualAction(
+            style: .normal,
+            title: "Reverse Shuffle"
+        ) {
+            [unowned self] contextualAction, view, boolValue in
+            self.delegate?.packagesViewController(
+                self,
+                didTapReverseShuffle: packages[indexPath.row],
+                at: indexPath.row
+            )
+        }
+        reverseShuffle.backgroundColor = .systemOrange
+        
+        return UISwipeActionsConfiguration(actions: [shuffle, reverseShuffle, share, delete])
     }
 }
 

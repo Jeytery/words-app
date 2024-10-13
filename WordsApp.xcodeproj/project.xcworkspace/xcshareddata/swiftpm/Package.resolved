@@ -10,21 +10,21 @@
       }
     },
     {
-      "identity" : "floatinggesture",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Jeytery/FloatingGesture",
-      "state" : {
-        "branch" : "master",
-        "revision" : "6a59523d8fcc4c7de4cea0cc010abb16d3f284bf"
-      }
-    },
-    {
       "identity" : "navigationbuttonable",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Jeytery/NavigationButtonable",
       "state" : {
         "branch" : "master",
         "revision" : "eacd8bde17d1021f39adabbf4999bc6aaefbaaa8"
+      }
+    },
+    {
+      "identity" : "settingsicongenerator",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sparrowcode/SettingsIconGenerator",
+      "state" : {
+        "revision" : "d2070ad86ae7834151f43418eaa57f05380d5aac",
+        "version" : "1.0.2"
       }
     },
     {
